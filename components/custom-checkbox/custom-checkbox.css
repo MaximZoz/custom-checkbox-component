@@ -1,0 +1,9 @@
+:host {
+    display: inline-block;
+    cursor: pointer;
+}
+
+div#checkbox {
+    width: 20px;
+    height: 20px;
+}

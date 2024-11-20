@@ -1,0 +1,15 @@
+custom-checkbox {
+    background-size: cover;
+}
+
+custom-checkbox:state(checked) {
+    background-image: url('/icons/checked.png');
+}
+
+custom-checkbox:state(mixed) {
+    background-image: url('/icons/mixed.png');
+}
+
+custom-checkbox:state(unchecked) {
+    background-image: url('/icons/unchecked.png');
+}
