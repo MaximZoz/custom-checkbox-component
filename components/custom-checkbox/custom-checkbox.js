@@ -24,7 +24,7 @@ class CustomCheckbox extends HTMLElement {
 
   connectedCallback() {
     if (!this.hasAttribute("role")) {
-      this.setAttribute("role", "checkbox");
+      this.setAttribute("role", "unchecked");
     }
     
     if (this.hasAttribute("size")) {
@@ -84,8 +84,10 @@ class CustomCheckbox extends HTMLElement {
       this.internals_.states.delete("mixed");
       this.internals_.states.delete("unchecked");
 
+      console.log(123)
       if (this.checkboxState) {
-         return this.internals_.states.add(this.checkboxState);
+          this.internals_.states.add(this.checkboxState);
+          return this.setAttribute("role", this.checkboxState);
       }
 
       if(this.hasAttribute("role")){
